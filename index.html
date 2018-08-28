@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			XYZ viewer
+		</title>
+		
+		<link href="style.css?version=1.0" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<div id="settings">
+			<table>
+				<tr>
+					<td colspan="2" class="center"><label for="file" class="button">Upload ASCII XYZ file</label><input type="file" id="file"></td>
+				</tr>
+				<tr>
+					<td><label for="scale">Scale (meters)</label></td>
+					<td><input type="number" step=1 min=0 id="scale" value="0.5"></td>
+				</tr>
+				<tr>
+					<td><label for="file">Apply shading</label></td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="last"><button id="alright" class="button" onclick="handleFile()">Alright</button></td>
+				</tr>
+			</table>
+		</div>
+		
+		<canvas id="canvas"></canvas>
+		
+		<script type="text/javascript" src="xyzviewer.js"></script>
+	</body>
+</html>
