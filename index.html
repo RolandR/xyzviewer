@@ -10,26 +10,28 @@
 	</head>
 	<body>
 		<div id="settings">
+			<form id="files">
 			<table>
 				<tr>
-					<td colspan="2" class="center"><label for="file" class="button">Upload ASCII XYZ file</label><input type="file" id="file"></td>
+					<td colspan="2" class="center"><label for="file" class="button">Upload ASCII XYZ file</label><input type="file" name="file" id="file" required></td>
 				</tr>
 				<tr>
 					<td><label for="scale">Scale (meters)</label></td>
-					<td><input type="number" step=1 min=0 id="scale" value="0.5"></td>
+					<td><input name="scale" type="number" step="0.1" min="0" id="scale" value="0.5"></td>
 				</tr>
 				<tr>
-					<td><label for="file">Apply shading</label></td>
-					<td><input type="checkbox"></td>
+					<td><label for="shading">Apply shading</label></td>
+					<td><input type="checkbox" name="shading" id="shading"></td>
 				</tr>
 				<tr>
-					<td colspan="2" class="last"><button id="alright" class="button" onclick="handleFile()">Alright</button></td>
+					<td colspan="2" class="last"><input name="submit" id="submit" type="submit" class="button" value="Display"></td>
 				</tr>
 			</table>
+			</form>
 		</div>
 		
 		<canvas id="canvas"></canvas>
 		
-		<script type="text/javascript" src="xyzviewer.js"></script>
+		<script type="text/javascript" src="./_js/xyzviewer.js"></script>
 	</body>
 </html>
